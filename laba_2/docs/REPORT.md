@@ -310,4 +310,3 @@ laba_2/
 └── .gitignore
 ```
 
-Ссылка на репозиторий: https://github.com/uora-vin/labs
