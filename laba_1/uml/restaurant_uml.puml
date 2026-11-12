@@ -1,0 +1,171 @@
+@startuml restaurant_classes
+' UML-диаграмма классов проекта «Ресторан» (вариант 25).
+' Код можно вставить на https://www.plantuml.com/plantuml/uml/
+' или импортировать в draw.io: Arrange -> Insert -> PlantUML.
+
+skinparam classAttributeIconSize 0
+hide empty members
+skinparam roundcorner 15
+
+' отступы побольше, чтобы диаграмма читалась слева направо
+skinparam ranksep 140
+skinparam nodesep 30
+
+skinparam class {
+    BackgroundColor #DAE8FC
+    BorderColor #6C8EBF
+    ArrowColor #333333
+}
+
+title Ресторан — диаграмма классов
+
+class Person {
+  - id : int
+  - full_name : str
+  - phone : str
+  + describe() : str
+}
+
+class Employee {
+  - position : str
+  - salary : float
+  + describe() : str
+}
+
+class Customer {
+  - discount_percent : float
+  - balance : float
+  + describe() : str
+  + pay(amount) : None
+}
+
+class Category {
+  - id : int
+  - name : str
+  - description : str
+}
+
+class Ingredient {
+  - id : int
+  - name : str
+  - unit : str
+}
+
+class MenuItem {
+  - id : int
+  - name : str
+  - category_id : int
+  - price : float
+  - weight : float
+  - description : str
+  + describe() : str
+}
+
+class RecipeLine {
+  - id : int
+  - menu_item_id : int
+  - ingredient_id : int
+  - amount : float
+}
+
+class Table {
+  - id : int
+  - seats : int
+  - zone : str
+  + describe() : str
+}
+
+class Reservation {
+  - id : int
+  - table_id : int
+  - customer_id : int
+  - reserved_at : str
+  - guests : int
+  - status : str
+  + describe() : str
+}
+
+class Order {
+  - id : int
+  - customer_id : int
+  - employee_id : int
+  - created_at : str
+  - table_id : int
+  - status : str
+  + describe() : str
+  + pay(customer, total, items_count) : None
+}
+
+class OrderItem {
+  - id : int
+  - order_id : int
+  - menu_item_id : int
+  - quantity : int
+}
+
+class Restaurant {
+  - name : str
+  - categories : Category[]
+  - ingredients : Ingredient[]
+  - menu_items : MenuItem[]
+  - recipe_lines : RecipeLine[]
+  - employees : Employee[]
+  - customers : Customer[]
+  - tables : Table[]
+  - reservations : Reservation[]
+  - orders : Order[]
+  - order_items : OrderItem[]
+  + add_...(item) : None
+  + find_...(id) : объект
+  + update_...(id, ...) : None
+  + delete_...(id) : None
+  + table_is_free(table_id) : bool
+  + order_items_of(order_id) : OrderItem[]
+  + order_total(order_id) : float
+  + pay_order(order_id) : float
+  + paid_total() : float
+  + to_dict() : dict
+  + from_dict(data) : Restaurant
+  + save_json(path) / load_json(path) : None
+  + save_xml(path) / load_xml(path) : None
+}
+
+class RestaurantError
+class InsufficientFundsError
+class EmptyOrderError
+
+' --- Наследование ---
+Person <|-- Employee
+Person <|-- Customer
+RestaurantError <|-- InsufficientFundsError
+RestaurantError <|-- EmptyOrderError
+
+' --- Композиция: ресторан хранит все справочники и документы ---
+Restaurant "1" *-- "0..*" Category
+Restaurant "1" *-- "0..*" Ingredient
+Restaurant "1" *-- "0..*" MenuItem
+Restaurant "1" *-- "0..*" RecipeLine
+Restaurant "1" *-- "0..*" Employee
+Restaurant "1" *-- "0..*" Customer
+Restaurant "1" *-- "0..*" Table
+Restaurant "1" *-- "0..*" Reservation
+Restaurant "1" *-- "0..*" Order
+Restaurant "1" *-- "0..*" OrderItem
+
+' --- Ассоциации по внешним ключам ---
+MenuItem "0..*" --> "1" Category : категория
+RecipeLine "0..*" --> "1" MenuItem : блюдо
+RecipeLine "0..*" --> "1" Ingredient : ингредиент
+Reservation "0..*" --> "1" Table : столик
+Reservation "0..*" --> "1" Customer : гость
+Order "0..*" --> "1" Customer : гость
+Order "0..*" --> "1" Employee : официант
+Order "0..*" --> "0..1" Table : столик
+OrderItem "0..*" --> "1" MenuItem : блюдо
+Order "1" *-- "0..*" OrderItem : позиции
+
+Restaurant ..> RestaurantError : выбрасывает
+
+left to right direction
+
+@enduml

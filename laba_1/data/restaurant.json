@@ -1,0 +1,291 @@
+{
+  "restaurant": "Ресторан «Тёплый вечер»",
+  "categories": [
+    {
+      "id": 1,
+      "name": "Салаты",
+      "description": "Холодные закуски"
+    },
+    {
+      "id": 2,
+      "name": "Супы",
+      "description": "Горячие первые блюда"
+    },
+    {
+      "id": 3,
+      "name": "Горячее",
+      "description": "Основные блюда"
+    },
+    {
+      "id": 4,
+      "name": "Напитки",
+      "description": "Горячие и холодные"
+    },
+    {
+      "id": 5,
+      "name": "Десерты",
+      "description": "Сладкое"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Куриное филе",
+      "unit": "кг"
+    },
+    {
+      "id": 2,
+      "name": "Помидоры",
+      "unit": "кг"
+    },
+    {
+      "id": 3,
+      "name": "Сыр пармезан",
+      "unit": "кг"
+    },
+    {
+      "id": 4,
+      "name": "Картофель",
+      "unit": "кг"
+    },
+    {
+      "id": 5,
+      "name": "Сливки",
+      "unit": "л"
+    },
+    {
+      "id": 6,
+      "name": "Кофе",
+      "unit": "кг"
+    }
+  ],
+  "menu_items": [
+    {
+      "id": 1,
+      "name": "Салат «Цезарь»",
+      "category_id": 1,
+      "price": 520.0,
+      "weight": 260.0,
+      "description": "С курицей и пармезаном"
+    },
+    {
+      "id": 2,
+      "name": "Борщ с говядиной",
+      "category_id": 2,
+      "price": 340.0,
+      "weight": 400.0,
+      "description": "Со сметаной"
+    },
+    {
+      "id": 3,
+      "name": "Стейк из индейки",
+      "category_id": 3,
+      "price": 690.0,
+      "weight": 320.0,
+      "description": "С овощами гриль"
+    },
+    {
+      "id": 4,
+      "name": "Капучино",
+      "category_id": 4,
+      "price": 210.0,
+      "weight": 250.0,
+      "description": "Двойное эспрессо"
+    },
+    {
+      "id": 5,
+      "name": "Тирамису",
+      "category_id": 5,
+      "price": 390.0,
+      "weight": 140.0,
+      "description": "Классический рецепт"
+    }
+  ],
+  "recipe_lines": [
+    {
+      "id": 1,
+      "menu_item_id": 1,
+      "ingredient_id": 1,
+      "amount": 0.08
+    },
+    {
+      "id": 2,
+      "menu_item_id": 1,
+      "ingredient_id": 2,
+      "amount": 0.05
+    },
+    {
+      "id": 3,
+      "menu_item_id": 1,
+      "ingredient_id": 3,
+      "amount": 0.02
+    },
+    {
+      "id": 4,
+      "menu_item_id": 2,
+      "ingredient_id": 4,
+      "amount": 0.12
+    },
+    {
+      "id": 5,
+      "menu_item_id": 2,
+      "ingredient_id": 5,
+      "amount": 0.03
+    },
+    {
+      "id": 6,
+      "menu_item_id": 4,
+      "ingredient_id": 6,
+      "amount": 0.02
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "full_name": "Анна Смирнова",
+      "phone": "+7-900-111-22-33",
+      "position": "Официант",
+      "salary": 55000.0
+    },
+    {
+      "id": 2,
+      "full_name": "Пётр Кузнецов",
+      "phone": "+7-900-222-33-44",
+      "position": "Повар",
+      "salary": 78000.0
+    },
+    {
+      "id": 3,
+      "full_name": "Ольга Иванова",
+      "phone": "+7-900-333-44-55",
+      "position": "Администратор",
+      "salary": 65000.0
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "full_name": "Алексей Петров",
+      "phone": "+7-900-444-55-66",
+      "discount_percent": 0.0,
+      "balance": 5000.0
+    },
+    {
+      "id": 2,
+      "full_name": "Мария Соколова",
+      "phone": "+7-900-555-66-77",
+      "discount_percent": 10.0,
+      "balance": 1056.0
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "seats": 2,
+      "zone": "Основной зал"
+    },
+    {
+      "id": 2,
+      "seats": 4,
+      "zone": "Основной зал"
+    },
+    {
+      "id": 3,
+      "seats": 6,
+      "zone": "VIP-зал"
+    },
+    {
+      "id": 4,
+      "seats": 4,
+      "zone": "Терраса"
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "table_id": 3,
+      "customer_id": 2,
+      "reserved_at": "2026-11-20 19:00",
+      "guests": 5,
+      "status": "Активна"
+    },
+    {
+      "id": 2,
+      "table_id": 1,
+      "customer_id": 1,
+      "reserved_at": "2026-11-21 13:00",
+      "guests": 2,
+      "status": "Активна"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "employee_id": 1,
+      "created_at": "2026-11-20 18:30",
+      "table_id": 2,
+      "status": "Новый"
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "employee_id": 1,
+      "created_at": "2026-11-19 20:00",
+      "table_id": 4,
+      "status": "Оплачен"
+    },
+    {
+      "id": 3,
+      "customer_id": 1,
+      "employee_id": 3,
+      "created_at": "2026-11-21 12:15",
+      "table_id": null,
+      "status": "Новый"
+    }
+  ],
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "menu_item_id": 1,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "order_id": 1,
+      "menu_item_id": 2,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "order_id": 1,
+      "menu_item_id": 4,
+      "quantity": 2
+    },
+    {
+      "id": 4,
+      "order_id": 2,
+      "menu_item_id": 3,
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "order_id": 2,
+      "menu_item_id": 5,
+      "quantity": 2
+    },
+    {
+      "id": 6,
+      "order_id": 3,
+      "menu_item_id": 2,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "order_id": 3,
+      "menu_item_id": 4,
+      "quantity": 1
+    }
+  ]
+}

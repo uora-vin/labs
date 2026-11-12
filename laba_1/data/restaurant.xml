@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8'?>
+<restaurant name="Ресторан «Тёплый вечер»">
+  <categories>
+    <category>
+      <id>1</id>
+      <name>Салаты</name>
+      <description>Холодные закуски</description>
+    </category>
+    <category>
+      <id>2</id>
+      <name>Супы</name>
+      <description>Горячие первые блюда</description>
+    </category>
+    <category>
+      <id>3</id>
+      <name>Горячее</name>
+      <description>Основные блюда</description>
+    </category>
+    <category>
+      <id>4</id>
+      <name>Напитки</name>
+      <description>Горячие и холодные</description>
+    </category>
+    <category>
+      <id>5</id>
+      <name>Десерты</name>
+      <description>Сладкое</description>
+    </category>
+  </categories>
+  <ingredients>
+    <ingredient>
+      <id>1</id>
+      <name>Куриное филе</name>
+      <unit>кг</unit>
+    </ingredient>
+    <ingredient>
+      <id>2</id>
+      <name>Помидоры</name>
+      <unit>кг</unit>
+    </ingredient>
+    <ingredient>
+      <id>3</id>
+      <name>Сыр пармезан</name>
+      <unit>кг</unit>
+    </ingredient>
+    <ingredient>
+      <id>4</id>
+      <name>Картофель</name>
+      <unit>кг</unit>
+    </ingredient>
+    <ingredient>
+      <id>5</id>
+      <name>Сливки</name>
+      <unit>л</unit>
+    </ingredient>
+    <ingredient>
+      <id>6</id>
+      <name>Кофе</name>
+      <unit>кг</unit>
+    </ingredient>
+  </ingredients>
+  <menu_items>
+    <menu_item>
+      <id>1</id>
+      <name>Салат «Цезарь»</name>
+      <category_id>1</category_id>
+      <price>520.0</price>
+      <weight>260.0</weight>
+      <description>С курицей и пармезаном</description>
+    </menu_item>
+    <menu_item>
+      <id>2</id>
+      <name>Борщ с говядиной</name>
+      <category_id>2</category_id>
+      <price>340.0</price>
+      <weight>400.0</weight>
+      <description>Со сметаной</description>
+    </menu_item>
+    <menu_item>
+      <id>3</id>
+      <name>Стейк из индейки</name>
+      <category_id>3</category_id>
+      <price>690.0</price>
+      <weight>320.0</weight>
+      <description>С овощами гриль</description>
+    </menu_item>
+    <menu_item>
+      <id>4</id>
+      <name>Капучино</name>
+      <category_id>4</category_id>
+      <price>210.0</price>
+      <weight>250.0</weight>
+      <description>Двойное эспрессо</description>
+    </menu_item>
+    <menu_item>
+      <id>5</id>
+      <name>Тирамису</name>
+      <category_id>5</category_id>
+      <price>390.0</price>
+      <weight>140.0</weight>
+      <description>Классический рецепт</description>
+    </menu_item>
+  </menu_items>
+  <recipe_lines>
+    <recipe_line>
+      <id>1</id>
+      <menu_item_id>1</menu_item_id>
+      <ingredient_id>1</ingredient_id>
+      <amount>0.08</amount>
+    </recipe_line>
+    <recipe_line>
+      <id>2</id>
+      <menu_item_id>1</menu_item_id>
+      <ingredient_id>2</ingredient_id>
+      <amount>0.05</amount>
+    </recipe_line>
+    <recipe_line>
+      <id>3</id>
+      <menu_item_id>1</menu_item_id>
+      <ingredient_id>3</ingredient_id>
+      <amount>0.02</amount>
+    </recipe_line>
+    <recipe_line>
+      <id>4</id>
+      <menu_item_id>2</menu_item_id>
+      <ingredient_id>4</ingredient_id>
+      <amount>0.12</amount>
+    </recipe_line>
+    <recipe_line>
+      <id>5</id>
+      <menu_item_id>2</menu_item_id>
+      <ingredient_id>5</ingredient_id>
+      <amount>0.03</amount>
+    </recipe_line>
+    <recipe_line>
+      <id>6</id>
+      <menu_item_id>4</menu_item_id>
+      <ingredient_id>6</ingredient_id>
+      <amount>0.02</amount>
+    </recipe_line>
+  </recipe_lines>
+  <employees>
+    <employee>
+      <id>1</id>
+      <full_name>Анна Смирнова</full_name>
+      <phone>+7-900-111-22-33</phone>
+      <position>Официант</position>
+      <salary>55000.0</salary>
+    </employee>
+    <employee>
+      <id>2</id>
+      <full_name>Пётр Кузнецов</full_name>
+      <phone>+7-900-222-33-44</phone>
+      <position>Повар</position>
+      <salary>78000.0</salary>
+    </employee>
+    <employee>
+      <id>3</id>
+      <full_name>Ольга Иванова</full_name>
+      <phone>+7-900-333-44-55</phone>
+      <position>Администратор</position>
+      <salary>65000.0</salary>
+    </employee>
+  </employees>
+  <customers>
+    <customer>
+      <id>1</id>
+      <full_name>Алексей Петров</full_name>
+      <phone>+7-900-444-55-66</phone>
+      <discount_percent>0.0</discount_percent>
+      <balance>5000.0</balance>
+    </customer>
+    <customer>
+      <id>2</id>
+      <full_name>Мария Соколова</full_name>
+      <phone>+7-900-555-66-77</phone>
+      <discount_percent>10.0</discount_percent>
+      <balance>1056.0</balance>
+    </customer>
+  </customers>
+  <tables>
+    <table>
+      <id>1</id>
+      <seats>2</seats>
+      <zone>Основной зал</zone>
+    </table>
+    <table>
+      <id>2</id>
+      <seats>4</seats>
+      <zone>Основной зал</zone>
+    </table>
+    <table>
+      <id>3</id>
+      <seats>6</seats>
+      <zone>VIP-зал</zone>
+    </table>
+    <table>
+      <id>4</id>
+      <seats>4</seats>
+      <zone>Терраса</zone>
+    </table>
+  </tables>
+  <reservations>
+    <reservation>
+      <id>1</id>
+      <table_id>3</table_id>
+      <customer_id>2</customer_id>
+      <reserved_at>2026-11-20 19:00</reserved_at>
+      <guests>5</guests>
+      <status>Активна</status>
+    </reservation>
+    <reservation>
+      <id>2</id>
+      <table_id>1</table_id>
+      <customer_id>1</customer_id>
+      <reserved_at>2026-11-21 13:00</reserved_at>
+      <guests>2</guests>
+      <status>Активна</status>
+    </reservation>
+  </reservations>
+  <orders>
+    <order>
+      <id>1</id>
+      <customer_id>1</customer_id>
+      <employee_id>1</employee_id>
+      <created_at>2026-11-20 18:30</created_at>
+      <table_id>2</table_id>
+      <status>Новый</status>
+    </order>
+    <order>
+      <id>2</id>
+      <customer_id>2</customer_id>
+      <employee_id>1</employee_id>
+      <created_at>2026-11-19 20:00</created_at>
+      <table_id>4</table_id>
+      <status>Оплачен</status>
+    </order>
+    <order>
+      <id>3</id>
+      <customer_id>1</customer_id>
+      <employee_id>3</employee_id>
+      <created_at>2026-11-21 12:15</created_at>
+      <table_id />
+      <status>Новый</status>
+    </order>
+  </orders>
+  <order_items>
+    <order_item>
+      <id>1</id>
+      <order_id>1</order_id>
+      <menu_item_id>1</menu_item_id>
+      <quantity>2</quantity>
+    </order_item>
+    <order_item>
+      <id>2</id>
+      <order_id>1</order_id>
+      <menu_item_id>2</menu_item_id>
+      <quantity>1</quantity>
+    </order_item>
+    <order_item>
+      <id>3</id>
+      <order_id>1</order_id>
+      <menu_item_id>4</menu_item_id>
+      <quantity>2</quantity>
+    </order_item>
+    <order_item>
+      <id>4</id>
+      <order_id>2</order_id>
+      <menu_item_id>3</menu_item_id>
+      <quantity>2</quantity>
+    </order_item>
+    <order_item>
+      <id>5</id>
+      <order_id>2</order_id>
+      <menu_item_id>5</menu_item_id>
+      <quantity>2</quantity>
+    </order_item>
+    <order_item>
+      <id>6</id>
+      <order_id>3</order_id>
+      <menu_item_id>2</menu_item_id>
+      <quantity>1</quantity>
+    </order_item>
+    <order_item>
+      <id>7</id>
+      <order_id>3</order_id>
+      <menu_item_id>4</menu_item_id>
+      <quantity>1</quantity>
+    </order_item>
+  </order_items>
+</restaurant>
