@@ -1,0 +1,48 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\user\my_ai_project\laba_proga\laba_2
+configfile: pyproject.toml
+testpaths: .
+plugins: anyio-4.15.1, mock-3.17.0
+collecting ... collected 37 items
+
+test_main.py::test_validate_valid_passports[4509123456] PASSED           [  2%]
+test_main.py::test_validate_valid_passports[4509 123456] PASSED          [  5%]
+test_main.py::test_validate_valid_passports[4509-123456] PASSED          [  8%]
+test_main.py::test_validate_valid_passports[45 09 123456] PASSED         [ 10%]
+test_main.py::test_validate_valid_passports[45-09-123456] PASSED         [ 13%]
+test_main.py::test_validate_invalid_passports[] PASSED                   [ 16%]
+test_main.py::test_validate_invalid_passports[4509 12345] PASSED         [ 18%]
+test_main.py::test_validate_invalid_passports[4509 1234567] PASSED       [ 21%]
+test_main.py::test_validate_invalid_passports[450912345] PASSED          [ 24%]
+test_main.py::test_validate_invalid_passports[45091234567] PASSED        [ 27%]
+test_main.py::test_validate_invalid_passports[450 9123456] PASSED        [ 29%]
+test_main.py::test_validate_invalid_passports[4509  123456] PASSED       [ 32%]
+test_main.py::test_validate_invalid_passports[4509--123456] PASSED       [ 35%]
+test_main.py::test_validate_invalid_passports[4509_123456] PASSED        [ 37%]
+test_main.py::test_validate_invalid_passports[4509.123456] PASSED        [ 40%]
+test_main.py::test_validate_invalid_passports[45O9 123456] PASSED        [ 43%]
+test_main.py::test_validate_invalid_passports[4509 12345A] PASSED        [ 45%]
+test_main.py::test_validate_invalid_passports[ 4509 123456] PASSED       [ 48%]
+test_main.py::test_validate_invalid_passports[4509 123456 ] PASSED       [ 51%]
+test_main.py::test_validate_non_string_returns_false[None] PASSED        [ 54%]
+test_main.py::test_validate_non_string_returns_false[4509123456] PASSED  [ 56%]
+test_main.py::test_validate_non_string_returns_false[value2] PASSED      [ 59%]
+test_main.py::test_find_passports_in_text PASSED                         [ 62%]
+test_main.py::test_find_passports_returns_empty_list PASSED              [ 64%]
+test_main.py::test_find_passports_does_not_match_longer_digit_sequence PASSED [ 67%]
+test_main.py::test_find_passports_keeps_duplicates_and_order PASSED      [ 70%]
+test_main.py::test_sample_file_contains_expected_passports PASSED        [ 72%]
+test_main.py::test_read_from_file_returns_utf8_text PASSED               [ 75%]
+test_main.py::test_read_from_file_missing_file PASSED                    [ 78%]
+test_main.py::test_read_from_file_invalid_utf8 PASSED                    [ 81%]
+test_main.py::test_read_from_url_returns_page_text PASSED                [ 83%]
+test_main.py::test_read_from_url_rejects_invalid_url[example.com] PASSED [ 86%]
+test_main.py::test_read_from_url_rejects_invalid_url[ftp://example.com] PASSED [ 89%]
+test_main.py::test_read_from_url_rejects_invalid_url[https://] PASSED    [ 91%]
+test_main.py::test_read_from_url_rejects_invalid_url[] PASSED            [ 94%]
+test_main.py::test_read_from_url_http_error PASSED                       [ 97%]
+test_main.py::test_read_from_url_network_error PASSED                    [100%]
+
+============================= 37 passed in 0.17s ==============================
