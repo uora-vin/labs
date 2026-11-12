@@ -23,7 +23,9 @@
 ```text
 laba_2/
 ├── docs/
+│   ├── report.docx         # Краткий отчёт
 │   └── TEST_RESULTS.txt    # Результаты последнего запуска тестов
+├── REPORT.md               # Подробный отчёт
 ├── README.md
 ├── main.py                 # Основная программа
 ├── pyproject.toml          # Настройки проекта и инструментов
